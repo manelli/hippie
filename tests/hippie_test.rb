@@ -49,7 +49,6 @@ test 'HEAD' do
 
   assert_equal 200, r.status
   assert_equal ['application/json'], r.headers['content-type']
-  assert_equal 'UTF-8', r.encoding.to_s
 end
 puts 'HEAD'
 
