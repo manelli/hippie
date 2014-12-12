@@ -1,5 +1,10 @@
 # Hippie: Simple HTTP wrapper for Net::HTTP
 
+## Installation
+```bash
+gem install hippie
+```
+
 ## Usage
 Here's an example of a GET request:
 
