@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'hippie'
-  s.version       = '0.5.0'
+  s.version       = '0.5.1'
   s.summary       = 'Simple HTTP'
   s.description   = 'Simple wrapper for Net::HTTP'
   s.author        = 'Martin Manelli'
@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
     'makefile',
     'lib/hippie.rb',
     'lib/cacert.pem',
+    'lib/hippie/response.rb',
     'tests/hippie_test.rb',
     'hippie.gemspec'
   ]
