@@ -1,36 +1,14 @@
+# encoding: utf-8
+
 require 'uri'
 require 'net/http'
 require 'openssl'
-require 'json'
+require_relative 'hippie/response'
 
 module Hippie
-  class Response
-    attr_reader :status, :headers, :body
-
-    def initialize(status, headers, body)
-      @status   = status.to_i
-      @headers  = headers
-      @body     = body || ''
-    end
-
-    def json
-      JSON.parse(@body)
-    end
-
-    def encoding
-      @body.encoding
-    end
-
-    def valid?
-      @status.between?(200, 299)
-    end
-
-    def error?
-      !valid?
-    end
-  end
-
-  CA_FILE = ENV.fetch('REQUESTS_CA_FILE') { File.expand_path('../cacert.pem', __FILE__) }
+  CA_FILE = ENV.fetch('REQUESTS_CA_FILE') {
+    File.expand_path('../cacert.pem', __FILE__)
+  }
 
   def self.get(url, **kwargs)
     request('GET', url, **kwargs)
