@@ -16,10 +16,6 @@ module Hippie
       JSON.parse(@body)
     end
 
-    def encoding
-      @body.encoding
-    end
-
     def succesful?
       @status.between?(200, 299)
     end
