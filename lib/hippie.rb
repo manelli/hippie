@@ -44,9 +44,11 @@ module Hippie
   private
 
   def self.request(method, url, headers: {}, data: nil, params: nil, auth: nil)
-    fail "No HTTP(S) scheme in: #{url}" unless url =~ /^https?:\/\//i
-
     uri = URI.parse(URI.encode(url))
+
+    unless ['http', 'https'].include? uri.scheme
+      fail URI::InvalidURIError, "No HTTP(S) scheme in: #{url}"
+    end
 
     uri.query = URI.encode_www_form(params) if params
     body = process_params(headers: headers, data: data) if data
@@ -60,7 +62,7 @@ module Hippie
       end
     end
 
-    Response.new(response.code, response.to_hash, response.body)
+    Hippie::Response.new(response.code, response.to_hash, response.body)
   end
 
   def self.opts(uri)
