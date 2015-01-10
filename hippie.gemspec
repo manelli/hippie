@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'hippie'
-  s.version       = '0.5.1'
+  s.version       = '0.6.0'
   s.summary       = 'Simple HTTP'
   s.description   = 'Simple wrapper for Net::HTTP'
   s.author        = 'Martin Manelli'
@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
   s.files = Dir[
     'LICENSE',
     'README.md',
-    'makefile',
     'lib/hippie.rb',
     'lib/cacert.pem',
     'lib/hippie/response.rb',
@@ -20,5 +19,5 @@ Gem::Specification.new do |s|
     'hippie.gemspec'
   ]
 
-  s.add_development_dependency 'cutest', '~> 1.2', '>= 1.2.0'
+  s.add_development_dependency 'minitest', '>= 2.5', '< 5.0'
 end
