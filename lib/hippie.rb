@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-require 'uri'
 require 'net/http'
 require 'openssl'
 require_relative 'hippie/response'
