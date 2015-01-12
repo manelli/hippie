@@ -37,7 +37,7 @@ module Hippie
     end
 
     def error?
-      !succesful?
+      !success?
     end
   end
 end
