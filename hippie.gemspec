@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name          = 'hippie'
   s.version       = '0.6.0'
   s.summary       = 'Simple HTTP'
-  s.description   = 'Simple wrapper for Net::HTTP'
+  s.description   = 'Simple HTTP client for Ruby'
   s.author        = 'Martin Manelli'
   s.email         = 'manelli.ml@gmail.com'
   s.homepage      = 'http://github.com/manelli/hippie'
