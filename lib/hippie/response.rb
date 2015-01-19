@@ -37,7 +37,7 @@ module Hippie
     end
 
     def error?
-      !success?
+      @status.between?(400, 599)
     end
   end
 end
