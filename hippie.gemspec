@@ -18,6 +18,4 @@ Gem::Specification.new do |s|
     'tests/hippie_test.rb',
     'hippie.gemspec'
   ]
-
-  s.add_development_dependency 'minitest', '>= 2.5', '< 5.0'
 end
