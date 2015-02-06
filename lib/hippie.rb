@@ -41,8 +41,6 @@ module Hippie
     request('TRACE', url, **kwargs)
   end
 
-  private
-
   def self.request(method, url, headers: {}, data: nil, params: nil, auth: nil)
     uri = URI.parse(URI.encode(url))
 
@@ -86,4 +84,6 @@ module Hippie
       data
     end
   end
+
+  private_class_method :request, :opts, :basic_auth, :process_params
 end
