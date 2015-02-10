@@ -44,7 +44,7 @@ class TestHippie < Minitest::Test
   end
 
   def test_options
-    # TODO
+    skip 'TODO: test_options'
   end
 
   def test_patch
@@ -56,7 +56,7 @@ class TestHippie < Minitest::Test
   end
 
   def test_trace
-    # TODO
+    skip 'TODO: test_trace'
   end
 
   def test_basic_auth
