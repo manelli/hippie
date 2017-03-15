@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'hippie'
-  s.version       = '0.6.0'
+  s.version       = '0.6.1'
   s.summary       = 'Simple HTTP'
   s.description   = 'Simple HTTP client for Ruby'
   s.author        = 'Martin Manelli'
